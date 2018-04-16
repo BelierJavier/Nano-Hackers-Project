@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -15,15 +15,73 @@
         -moz-box-shadow: 7px -1px 36px 0px rgba(0,0,0,0.75);
         box-shadow: 7px -1px 36px 0px rgba(0,0,0,0.75);
       }
+      #stats{
+        position: absolute;
+        width:35%;
+        left:65%;
+      }
+      #stab{
+        position: relative;
+        border:10px solid #222B39;
+        background-color: #222B39;
+        margin-top: 5%;
+        border-radius:30px;
+        height: 22px;
+        width: 85%;
+        color: white;
+        outline: none;
+        font-size: 17px;
+        -o-transition:.5s ease-in-out;
+        -ms-transition:.5s ease-in-out;
+        -moz-transition:.5s ease-in-out;
+        -webkit-transition:.5s ease-in-out;
+      }
+      #stab:hover { 
+    	background-color: white;
+    	border-color: white;
+    	color:#222B39;
+        -o-transition:.5s ease-in-out;
+        -ms-transition:.5s ease-in-out;
+        -moz-transition:.5s ease-in-out;
+        -webkit-transition:.5s ease-in-out;
+      }
+      #bird{
+      	height:40%;
+      	width:40%;
+      }
+
+      #name1{
+        margin-top: -10px;
+        position:relative;
+        color: white; 
+        font-family:'Black Han Sans', sans-serif;
+        font-size: 32px;
+      }
+      #name2{
+      	float: right;
+      	position:absolute;
+      	color:white; 
+        font-family:'Black Han Sans', sans-serif;
+      }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+        background-color: #01ABEE;
+
       }
     </style>
   </head>
   <body>
+      <div id= "stats">
+        <br>
+        <center><span style="display: inline-block;"id="name1">tweet</span></center>
+        <center><span style="display: inline-block;"id="name2">Catcher</span></center>
+        <br>
+        <center><input id="stab" placeholder="Search Location"></input></center>
+        <center><img src="twitter-flying-bird-for-website.jpg" alt="Twitter Bird" id="bird"></img></center>
+      </div>
     <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
