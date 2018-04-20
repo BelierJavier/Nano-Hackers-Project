@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -15,7 +16,7 @@
         -moz-box-shadow: 7px -1px 36px 0px rgba(0,0,0,0.75);
         box-shadow: 7px -1px 36px 0px rgba(0,0,0,0.75);
       }
-      #description {
+            #description {
         font-family: Roboto;
         font-size: 15px;
         font-weight: 300;
@@ -61,16 +62,32 @@
       }
 
       #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
+                position: relative;
+        border:5px solid #222B39;
+        background-color: #222B39;
+        margin-top: 5%;
+        border-radius:30px;
+        height: 22px;
+        width: 85%;
+        color: white;
+        outline: none;
+        font-size: 17px;
+        -o-transition:.5s ease-in-out;
+        -ms-transition:.5s ease-in-out;
+        -moz-transition:.5s ease-in-out;
+        -webkit-transition:.5s ease-in-out;
         text-overflow: ellipsis;
-        width: 400px;
+        
       }
-
+            #pac-input:hover { 
+    	background-color: white;
+    	border-color: white;
+    	color:#222B39;
+        -o-transition:.5s ease-in-out;
+        -ms-transition:.5s ease-in-out;
+        -moz-transition:.5s ease-in-out;
+        -webkit-transition:.5s ease-in-out;
+      }
       #pac-input:focus {
         border-color: #4d90fe;
       }
@@ -149,10 +166,15 @@
         <center><span style="display: inline-block;"id="name1">tweet</span></center>
         <center><span style="display: inline-block;"id="name2">Catcher</span></center>
         <br>
-        <center><input id="stab" placeholder="Search Location"></input></center>
+        <center><input id="pac-input" class="controls" type="text" placeholder="Search Box"></center>
         <center><img src="twitter-flying-bird-for-website.jpg" alt="Twitter Bird" id="bird"></img></center>
       </div>
     <div id="map"></div>
+<<<<<<< HEAD
+=======
+        
+    <div id="map"></div>
+>>>>>>> b36b950bbe03f2098edeab503d121c5f4870fb77
     <script>
       // This example adds a search box to a map, using the Google Place Autocomplete
       // feature. People can enter geographical searches. The search box will return a
@@ -172,7 +194,7 @@
         // Create the search box and link it to the UI element.
         var input = document.getElementById('stab');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -275,5 +297,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrNqS8WD8Ph3HefudRwU9etn5DJmvcVZc&callback=initMap">
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrNqS8WD8Ph3HefudRwU9etn5DJmvcVZc&libraries=places&callback=initAutocomplete"
+         async defer></script>
   </body>
 </html>
